@@ -1,4 +1,3 @@
-// plasmic-init.ts
 import { initPlasmicLoader } from "@plasmicapp/loader-nextjs";
 
 export const PLASMIC = initPlasmicLoader({
@@ -9,4 +8,13 @@ export const PLASMIC = initPlasmicLoader({
     },
   ],
   preview: true,
+});
+
+import { TestBox } from "./src/components/plasmic/TestBox";
+
+PLASMIC.registerComponent(TestBox, {
+  name: "TestBox",
+  props: {
+    text: "string",
+  },
 });
