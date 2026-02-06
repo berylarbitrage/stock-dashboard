@@ -1,4 +1,6 @@
 import { initPlasmicLoader } from "@plasmicapp/loader-nextjs";
+import { TestBox } from "./src/components/plasmic/TestBox";
+import AppSidebar from "./src/layout/AppSidebar";
 
 export const PLASMIC = initPlasmicLoader({
   projects: [
@@ -10,11 +12,14 @@ export const PLASMIC = initPlasmicLoader({
   preview: true,
 });
 
-import { TestBox } from "./src/components/plasmic/TestBox";
-
 PLASMIC.registerComponent(TestBox, {
   name: "TestBox",
   props: {
     text: "string",
   },
+});
+
+PLASMIC.registerComponent(AppSidebar, {
+  name: "AppSidebar",
+  props: {},
 });
